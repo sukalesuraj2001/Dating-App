@@ -1,0 +1,170 @@
+.home-main-section {
+    background-color: #1E1E1E;
+  }
+  
+  .search-home-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 59px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+  }
+  
+  .search-icon {
+    margin-right: 10px;
+  }
+  
+  .profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circular-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+  .swiper-container {
+    margin-top: 50px; /* Adjust this value as needed */
+    margin-right: 20px; /* Align swiper to the left side */
+  }
+  
+  .swiper-slide {
+    width: 100px; /* Adjust the width if needed */
+    height: 120px; /* Adjust the height to accommodate the text */
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 70px;
+  }
+  
+  .circular-image-slider {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Space between image and text */
+  }
+  
+  .image-text {
+    font-size: 14px;
+    color: white;
+  }
+  
+  .feed {
+    
+    position: absolute;
+    // top: 36%; 
+    width: 100%;
+    background-color: white;
+    border-top-left-radius: 52px;
+    border-top-right-radius: 52px;
+    z-index: 9999;
+  }
+
+  
+  .feed-section {
+    padding-top: 15px; 
+  }
+  
+  .card {
+    margin: 20px 20px 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 12px;
+  }
+  
+  .card-header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-image {
+    font-weight: bold;
+    margin-left: 10px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .time {
+    color: #ccc;
+    text-align: right;
+    width: 100%;
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
+  
+  .likes {
+    font-weight: bold;
+  }
+  
+  .hashtag {
+    color: #4a5279;
+    text-decoration: none;
+    margin-right: 5px;
+  }
+  
+  hr {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  
+  .card-actions {
+    padding: 10px;
+    display: flex;
+  }
+  
+  .comments-input {
+    background-color: white;
+    margin-left: 10px;
+    border: none;
+    width: 100%;
+    border: none;
+  }
+  input:focus {
+    box-shadow: none;
+    border-color: #ced4da; 
+  }
+  .action-icons i{
+    margin-right: 16px;
+  }
+
+//   main tabs section 
+
+.tabs-page-section {
+    .main-tabs {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 28px;
+    }
+  }
+ 
+  
+  .fa-heart {
+    cursor: pointer;
+  }
+  
+  .red {
+    color: red;
+  }

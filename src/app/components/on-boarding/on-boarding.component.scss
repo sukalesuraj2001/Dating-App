@@ -1,0 +1,168 @@
+.onBoarding-main-section {
+    background-color: black;
+    height: 100vh;
+    overflow-x: hidden; /* Enable horizontal scrolling */
+
+    .logo-text-wrapper {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 53px;
+    }
+
+    .img {
+        height: 33px !important;
+        margin-right: 6px;
+        width: 19.2px;
+        margin-top: 7px;
+    }
+
+    .heading-section {
+        width: 338px;
+        color: white;
+        margin-left: 26px;
+        margin-top: 21px;
+    }
+
+    .heading h1 {
+        font-family: Caros, sans-serif;
+        font-size: 62px;
+    }
+
+    .para-section {
+        color: #B9C1BE;
+        margin-top: 24px;
+        line-height: 20px;
+
+        p {
+            font-family: Circular Std, sans-serif;
+            font-size: 22px;
+            margin-left: 24px;
+        }
+    }
+
+    .icons {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 4px;
+
+        .icon1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 65px;
+            height: 65px;
+            margin-right: 18px;
+            background-color: #000;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 14px;
+            p{
+                font-size: 3rem;
+                img{
+                    width: 35px;
+
+                }
+            }
+        }
+    }
+
+    .OR-wrapper {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .first-hr, .second-hr {
+        flex: 1; 
+    }
+    
+    .first-hr hr, .second-hr hr {
+        border: none;
+        border-top: 4px solid rgb(255, 255, 255);
+        margin: 0px 15px;
+        width: 148px;
+    }
+    
+    .OR-text {
+        padding: 0 10px; 
+        margin-right: 11px;
+    }
+    
+    .OR-text p {
+        margin: 0; 
+        color: white;
+    }
+
+    .signup-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+
+        .button button {
+            width: 372px;
+            height: 58px;
+            background-color: #FFFFFF;
+            color: black;
+            border-radius: 16px;
+            font-weight: bold;
+        }
+    }
+
+    .existing-account-link {
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        margin-top: 41px;
+    }
+    .existing-link p a{
+        color: blue;
+        cursor: pointer;
+    }
+}
+
+/* Ensure horizontal scroll on body as well if needed */
+body {
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+/* Add responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .heading h1 {
+        font-size: 45px; /* Adjust font size for smaller screens */
+    }
+
+    .para-section p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .signup-button .button button {
+        width: 90%; /* Make button width responsive */
+    }
+
+    .heading-section {
+        width: auto; /* Ensure heading section is responsive */
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}

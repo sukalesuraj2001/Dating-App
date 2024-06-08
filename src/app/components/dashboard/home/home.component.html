@@ -1,0 +1,295 @@
+<ion-content  class="main-section ">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-down-outline" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <section class="home-main-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="search-home-wrapper">
+            <div class="search-icon">
+              <span><i routerLink="/messageHome" class="fa-solid fa-message fa-2xl position-relative"
+                  style="color: #ffffff;"></i></span>
+              <span class="position-absolute  badge rounded-pill bg-danger" style="    margin-top: -18px;">
+                99+
+                <!-- <span class="visually-hidden">unread messages</span> -->
+              </span>
+
+
+            </div>
+            <div class="home-text">
+              <h2>Home</h2>
+            </div>
+            <div class="profile-section">
+              <img src="https://p7.hiclipart.com/preview/481/915/760/computer-icons-user-avatar-woman-avatar.jpg"
+                alt="Profile Picture" class="circular-image">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="swiper-container">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="img-section">
+                    <img src="https://p7.hiclipart.com/preview/481/915/760/computer-icons-user-avatar-woman-avatar.jpg"
+                      alt="Profile Picture" class="circular-image-slider">
+                    <p class="image-text">User 1</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-section">
+                    <img src="https://p7.hiclipart.com/preview/481/915/760/computer-icons-user-avatar-woman-avatar.jpg"
+                      alt="Profile Picture" class="circular-image-slider">
+                    <p class="image-text">User 2</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-section">
+                    <img src="https://p7.hiclipart.com/preview/481/915/760/computer-icons-user-avatar-woman-avatar.jpg"
+                      alt="Profile Picture" class="circular-image-slider">
+                    <p class="image-text">User 3</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-section">
+                    <img src="https://p7.hiclipart.com/preview/481/915/760/computer-icons-user-avatar-woman-avatar.jpg"
+                      alt="Profile Picture" class="circular-image-slider">
+                    <p class="image-text">User 4</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-section">
+                    <img src="https://p7.hiclipart.com/preview/481/915/760/computer-icons-user-avatar-woman-avatar.jpg"
+                      alt="Profile Picture" class="circular-image-slider">
+                    <p class="image-text">User 5</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-section">
+                    <img src="https://p7.hiclipart.com/preview/481/915/760/computer-icons-user-avatar-woman-avatar.jpg"
+                      alt="Profile Picture" class="circular-image-slider">
+                    <p class="image-text">User 6</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-section">
+                    <img src="https://p7.hiclipart.com/preview/481/915/760/computer-icons-user-avatar-woman-avatar.jpg"
+                      alt="Profile Picture" class="circular-image-slider">
+                    <p class="image-text">User 7</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-section">
+                    <img src="https://p7.hiclipart.com/preview/481/915/760/computer-icons-user-avatar-woman-avatar.jpg"
+                      alt="Profile Picture" class="circular-image-slider">
+                    <p class="image-text">User 8</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- new feed section start -->
+  <div class="container feed">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="feed-section">
+          <div class="card  shadow">
+            <div class="card-header">
+              <img class="user-image"
+                src="https://i0.wp.com/247musichub.com/wp-content/uploads/2017/01/Ed-Sheeran-shape-of-you-Mp3-Download.jpg?resize=300%2C300" />
+              <p class="user-name">EdSheeran</p>
+              <p class="time"><i class="fa fa-ellipsis-h"></i></p>
+            </div>
+            <div class="card-image">
+              <img
+                src="https://i.dailymail.co.uk/i/pix/2015/08/11/13/2B45A96D00000578-3193636-image-a-62_1439295120262.jpg"
+                width="100%" />
+            </div>
+            <div class="card-content">
+              <p class="likes">
+                <i class="fa fa-heart fa-xl" [ngClass]="{'red': isLiked}" (click)="toggleLike()"></i> {{ likesCount }}
+                likes
+              </p>
+              <p>The new one tattoo <a href="#">vonD</a></p>
+              <p><a href="#">#edsheerantour</a></p>
+              <hr>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="action-icons">
+                <i class="fa fa-heart-o" (click)="logAndAddComment()"></i></a>
+              <input class="comments-input form-control " type="text" placeholder="Add a comment..."
+                [(ngModel)]="commentInput" />
+              <a class="action-icons">
+                <i class="fa-solid fa-paper-plane fa-xl" (click)="logAndAddComment()"></i></a>
+            </div>
+            <div *ngFor="let comment of comments">
+              <p>{{ comment }}</p>
+            </div>
+
+          </div>
+          <div class="card  shadow">
+            <div class="card-header">
+              <img class="user-image"
+                src="https://i0.wp.com/247musichub.com/wp-content/uploads/2017/01/Ed-Sheeran-shape-of-you-Mp3-Download.jpg?resize=300%2C300" />
+              <p class="user-name">EdSheeran</p>
+              <p class="time"><i class="fa fa-ellipsis-h"></i></p>
+            </div>
+            <div class="card-image">
+              <img
+                src="https://i.dailymail.co.uk/i/pix/2015/08/11/13/2B45A96D00000578-3193636-image-a-62_1439295120262.jpg"
+                width="100%" />
+            </div>
+            <div class="card-content">
+              <p class="likes">
+                <i class="fa fa-heart fa-xl" [ngClass]="{'red': isLiked}" (click)="toggleLike()"></i> {{ likesCount }}
+                likes
+              </p>
+              <p>The new one tattoo <a href="#">vonD</a></p>
+              <p><a href="#">#edsheerantour</a></p>
+              <hr>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="action-icons"><i class="fa fa-heart-o" (click)="logAndAddComment()"></i></a>
+              <input class="comments-input" type="text" placeholder="Add a comment..." [(ngModel)]="commentInput" />
+              <a class="action-icons"><i class="fa-solid fa-paper-plane fa-xl" (click)="logAndAddComment()"></i></a>
+            </div>
+            <div *ngFor="let comment of comments">
+              <p>{{ comment }}</p>
+            </div>
+
+          </div>
+          <div class="card  shadow">
+            <div class="card-header">
+              <img class="user-image"
+                src="https://i0.wp.com/247musichub.com/wp-content/uploads/2017/01/Ed-Sheeran-shape-of-you-Mp3-Download.jpg?resize=300%2C300" />
+              <p class="user-name">EdSheeran</p>
+              <p class="time"><i class="fa fa-ellipsis-h"></i></p>
+            </div>
+            <div class="card-image">
+              <img
+                src="https://i.dailymail.co.uk/i/pix/2015/08/11/13/2B45A96D00000578-3193636-image-a-62_1439295120262.jpg"
+                width="100%" />
+            </div>
+            <div class="card-content">
+              <p class="likes">
+                <i class="fa fa-heart fa-xl" [ngClass]="{'red': isLiked}" (click)="toggleLike()"></i> {{ likesCount }}
+                likes
+              </p>
+              <p>The new one tattoo <a href="#">vonD</a></p>
+              <p><a href="#">#edsheerantour</a></p>
+              <hr>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="action-icons"><i class="fa fa-heart-o" (click)="logAndAddComment()"></i></a>
+              <input class="comments-input" type="text" placeholder="Add a comment..." [(ngModel)]="commentInput" />
+              <a class="action-icons"><i class="fa-solid fa-paper-plane fa-xl" (click)="logAndAddComment()"></i></a>
+            </div>
+            <div *ngFor="let comment of comments">
+              <p>{{ comment }}</p>
+            </div>
+
+          </div>
+          <div class="card  shadow">
+            <div class="card-header">
+              <img class="user-image"
+                src="https://i0.wp.com/247musichub.com/wp-content/uploads/2017/01/Ed-Sheeran-shape-of-you-Mp3-Download.jpg?resize=300%2C300" />
+              <p class="user-name">EdSheeran</p>
+              <p class="time"><i class="fa fa-ellipsis-h"></i></p>
+            </div>
+            <div class="card-image">
+              <img
+                src="https://i.dailymail.co.uk/i/pix/2015/08/11/13/2B45A96D00000578-3193636-image-a-62_1439295120262.jpg"
+                width="100%" />
+            </div>
+            <div class="card-content">
+              <p class="likes">
+                <i class="fa fa-heart fa-xl" [ngClass]="{'red': isLiked}" (click)="toggleLike()"></i> {{ likesCount }}
+                likes
+              </p>
+              <p>The new one tattoo <a href="#">vonD</a></p>
+              <p><a href="#">#edsheerantour</a></p>
+              <hr>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="action-icons"><i class="fa fa-heart-o" (click)="logAndAddComment()"></i></a>
+              <input class="comments-input" type="text" placeholder="Add a comment..." [(ngModel)]="commentInput" />
+              <a class="action-icons"><i class="fa-solid fa-paper-plane fa-xl" (click)="logAndAddComment()"></i></a>
+            </div>
+            <div *ngFor="let comment of comments">
+              <p>{{ comment }}</p>
+            </div>
+
+          </div>
+          <div class="card  shadow">
+            <div class="card-header">
+              <img class="user-image"
+                src="https://i0.wp.com/247musichub.com/wp-content/uploads/2017/01/Ed-Sheeran-shape-of-you-Mp3-Download.jpg?resize=300%2C300" />
+              <p class="user-name">EdSheeran</p>
+              <p class="time"><i class="fa fa-ellipsis-h"></i></p>
+            </div>
+            <div class="card-image">
+              <img
+                src="https://i.dailymail.co.uk/i/pix/2015/08/11/13/2B45A96D00000578-3193636-image-a-62_1439295120262.jpg"
+                width="100%" />
+            </div>
+            <div class="card-content">
+              <p class="likes">
+                <i class="fa fa-heart fa-xl" [ngClass]="{'red': isLiked}" (click)="toggleLike()"></i> {{ likesCount }}
+                likes
+              </p>
+              <p>The new one tattoo <a href="#">vonD</a></p>
+              <p><a href="#">#edsheerantour</a></p>
+              <hr>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="action-icons"><i class="fa fa-heart-o" (click)="logAndAddComment()"></i></a>
+              <input class="comments-input" type="text" placeholder="Add a comment..." [(ngModel)]="commentInput" />
+              <a class="action-icons"><i class="fa-solid fa-paper-plane fa-xl" (click)="logAndAddComment()"></i></a>
+            </div>
+            <div *ngFor="let comment of comments">
+              <p>{{ comment }}</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<!-- main tabs section start  -->
+
+<section class="tabs-page-section">
+  <div class="container shadow p-3  bg-body-tertiary">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="main-tabs">
+          <div class="home-tab">
+            <p><i class="fa-solid fa-house fa-xl" (click)="homePage()"></i></p>
+          </div>
+          <div class="home-tab">
+            <p><i class="fa-solid fa-magnifying-glass fa-xl"></i></p>
+          </div>
+          <div class="home-tab">
+            <p><i class="fa-solid fa-phone fa-xl"></i></p>
+          </div>
+          <div class="home-tab">
+            <p><i class="fa-solid fa-gear fa-xl"></i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,98 @@
+<section class="signIn-main-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="back-arrow">
+          <p routerLink="/"><i class="fa-solid fa-arrow-left fa-2xl" style="color: #000000;"></i></p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="signIn-heading">
+          <div class="text ">
+            <h2 class="fw-bold">Log In to Chatbox</h2>
+          </div>
+          <hr>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="text-wrapper">
+          <div class="text-para">
+            <p>Welcome back! Sign in using your </p>
+            <p> social account or email to continue us.. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="icons">
+          <div class="icon1">
+            <p><img src="assets/icon/facebook.png" alt=""></p>
+          </div>
+          <div class="icon1">
+            <p><img src="assets/icon/google.png" alt=""></p>
+          </div>
+          <div class="icon1">
+            <p><img src="assets/icon/apple2.png" alt=""></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="OR-wrapper">
+          <div class="first-hr">
+            <hr>
+          </div>
+          <div class="OR-text">
+            <p>OR</p>
+          </div>
+          <div class="second-hr">
+            <hr>
+          </div>
+        </div>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="submitForm()">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="signIn-form">
+              <div class="form-label" [ngClass]="{'text-danger': form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)}">
+                <h3>Your email</h3>
+              </div>
+              <div class="form-field">
+                <input type="email" class="form-control custom-input" id="email" formControlName="email" [ngClass]="{'invalid-input': form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)}">
+                <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)" class="text-danger">
+                  <small *ngIf="form.get('email')?.errors?.['required']">Email is required.</small>
+                  <small *ngIf="form.get('email')?.errors?.['email']">Invalid email format.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="signIn-form">
+              <div class="form-label" [ngClass]="{'text-danger': form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)}">
+                <h3>Password</h3>
+              </div>
+              <div class="form-field">
+                <input type="password" class="form-control custom-input" id="password" formControlName="password" [ngClass]="{'invalid-input': form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)}">
+                <div *ngIf="form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)" class="text-danger">
+                  <small *ngIf="form.get('password')?.errors?.['required']">Password is required.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="signup-button">
+            <div class="button">
+              <button type="submit" [disabled]="!form.valid" routerLink="/home">Log in</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="col-md-12">
+        <div class="existing-account-link">
+          <div class="existing-test">
+            <p routerLink="/forgotPassword">Forgot password?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

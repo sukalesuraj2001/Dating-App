@@ -1,0 +1,7 @@
+{
+  "name": "Dating App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,89 @@
+<section class="message-container-main-section shadow">
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="message-wrapper">
+          <div class="back-arrow mt-2" routerLink="/messageHome">
+            <p><i class="fa-solid fa-arrow-left fa-xl"></i></p>
+          </div>
+          <div class="user-info">
+            <div class="user-pic">
+              <img src="https://p7.hiclipart.com/preview/481/915/760/computer-icons-user-avatar-woman-avatar.jpg"
+                alt="Profile Picture" class="circular-image">
+            </div>
+            <div class="user-details ">
+              <p>Username</p>
+            </div>
+
+          </div>
+          <div class="calling-option">
+            <div class="voice-call">
+              <p><i class="fa-solid fa-phone fa-xl"></i></p>
+            </div>
+            <div class="video-call">
+              <p><i class="fa-solid fa-video fa-xl"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- message section  -->
+<section class="message-send-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="message-section">
+          <div class="profile mx-4">
+            <img src="https://p7.hiclipart.com/preview/481/915/760/computer-icons-user-avatar-woman-avatar.jpg" alt="Sender Profile" class="profile-img">
+            <p class="profile-name">Sender Name</p>
+          </div>
+          <div class="message sender shadow">
+            <p>This is a message from the sender.</p>
+            <div class="timestamp">12:30 PM</div>
+          </div>
+          <div class="profile receiver-profile me-4">
+            <p class="profile-name">Receiver Name</p>
+            <img src="https://p7.hiclipart.com/preview/481/915/760/computer-icons-user-avatar-woman-avatar.jpg" alt="Receiver Profile" class="profile-img mx-3">
+          </div>
+          <div class="message receiver shadow">
+            <p>This is a message from the receiver.</p>
+            <div class="timestamp">12:32 PM</div>
+          </div>
+          <!-- Add more messages here -->
+        </div>
+        <div class="input-section">
+          <div class="input-wrapper shadow-lg">
+            <div class="attach-icon">
+              <i class="fa-solid fa-paperclip " data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"></i>
+            </div>
+            <input type="text" placeholder="Type a message..." class="message-input"  style="background-color: white;">
+            <div class="action-icons">
+              <i class="fa-solid fa-microphone"></i>
+              <i class="fa-solid fa-camera"></i>
+              <i class="fa-solid fa-clipboard"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- open share icon functionality -->
+
+
+<!-- <button class="btn btn-primary" type="button" >Toggle bottom offcanvas</button> -->
+
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body small">
+    ...
+  </div>
+</div>

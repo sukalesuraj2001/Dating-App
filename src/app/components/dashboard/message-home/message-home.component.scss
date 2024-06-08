@@ -1,0 +1,98 @@
+.home-main-section {
+    background-color: #1E1E1E;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 100%;
+}
+
+.search-home-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 59px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+}
+
+.search-icon {
+    margin-right: 10px;
+}
+
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.swiper-container {
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.swiper-slide {
+    width: 100px;
+    height: 120px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 10px;}
+
+.circular-image-slider {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+}
+
+.image-text {
+    font-size: 14px;
+    color: white;
+}
+
+/* Message section */
+ 
+
+.message-wrapper {
+    background-color: white;
+    border-top-left-radius: 52px;
+    border-top-right-radius: 52px;
+    overflow-y: auto; 
+    width: 100%;
+}
+.sliding{
+    background-color: white !important;
+    border: 2px solid red;
+}
+.message-list {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid #ddd; /* Optional: Add border between message items */
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; /* Center items vertically */
+}
+
+.profile-img {
+    margin-right: 10px; /* Optional: Adjust spacing between profile image and user info */
+}
+
+.user-info {
+    flex-grow: 1; /* Allow user info to take up remaining space */
+}

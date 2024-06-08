@@ -1,0 +1,196 @@
+.message-container-main-section {
+    background-color: rgb(248, 248, 248);
+    color: black;
+    border-bottom: 1px solid rgb(165, 177, 165);
+
+    .container {
+        .row {
+            .col-md-12 {
+                .message-wrapper {
+                    margin-top: 58px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+
+                    .back-arrow {
+                        flex: 0 1 auto;
+                      
+                    }
+
+                    .user-info {
+                        display: flex;
+                        align-items: center;
+
+                        .user-pic {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .circular-image {
+                                width: 60px;
+                                height: 60px;
+                                border-radius: 50%;
+                                border: 2px solid green;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .user-details {
+                            margin-left: 10px;
+
+                            p {
+                                font-weight: bold;
+                                font-size: 22px;
+                                margin-left: 18px;
+                            }
+                        }
+                    }
+
+                    .calling-option {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 30px;
+                        /* Space between the call icons */
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//   message section 
+
+
+.message-send-section {
+    background-color: #f8f8f8;
+    color: black;
+    padding: 20px 0;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    height: 100%;
+}
+
+.row {
+    height: 100%;
+}
+
+.col-md-12 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.message-section {
+    flex: 1;
+    padding: 10px 0;
+}
+
+.message {
+    padding: 10px 20px;
+    border-radius: 0px 20px 20px 20px;
+    max-width: 60%;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.sender {
+    background-color: #F2F7FB;
+    align-self: flex-start;
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+
+.receiver {
+    background-color: #20A090;
+    margin-right: 50px;
+    color: white;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.profile {
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-name {
+    font-weight: bold;
+}
+
+.receiver-profile{
+    float: right;
+}
+/* Remaining CSS styles remain unchanged */
+
+.timestamp {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+
+    
+    padding: 10px 0;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.attach-icon {
+    // margin-right: 10px;
+    color: #666;
+}
+
+.message-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+    border-radius: 25px;
+}
+
+.action-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+    margin-right: 20px;
+}
+
+.action-icons i {
+    cursor: pointer;
+}

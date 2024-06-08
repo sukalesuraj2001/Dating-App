@@ -1,0 +1,92 @@
+<section class="signIn-main-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="back-arrow">
+          <p routerLink="/"><i class="fa-solid fa-arrow-left fa-2xl" style="color: #000000;"></i></p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="signIn-heading">
+          <div class="text ">
+            <h2 class="fw-bold">SignUp with Email</h2>
+          </div>
+          <hr>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="text-wrapper">
+          <div class="text-para">
+            <p>Get chatting with friends and family today</p>
+            <p>by signing up for our dating app</p>
+          </div>
+        </div>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="submitForm()">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="signIn-form">
+              <div class="form-label" [ngClass]="{'text-danger': form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)}">
+                <h3>Your Name</h3>
+              </div>
+              <div class="form-field">
+                <input type="text" class="form-control custom-input" id="name" formControlName="name" [ngClass]="{'invalid-input': form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)}">
+                <div *ngIf="form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)" class="text-danger">
+                  <small *ngIf="form.get('name')?.errors?.['required']">Name is required.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="signIn-form">
+              <div class="form-label" [ngClass]="{'text-danger': form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)}">
+                <h3>Your Email</h3>
+              </div>
+              <div class="form-field">
+                <input type="email" class="form-control custom-input" id="email" formControlName="email" [ngClass]="{'invalid-input': form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)}">
+                <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)" class="text-danger">
+                  <small *ngIf="form.get('email')?.errors?.['required']">Email is required.</small>
+                  <small *ngIf="form.get('email')?.errors?.['email']">Invalid email format.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="signIn-form">
+              <div class="form-label" [ngClass]="{'text-danger': form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)}">
+                <h3>Password</h3>
+              </div>
+              <div class="form-field">
+                <input type="password" class="form-control custom-input" id="password" formControlName="password" [ngClass]="{'invalid-input': form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)}">
+                <div *ngIf="form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)" class="text-danger">
+                  <small *ngIf="form.get('password')?.errors?.['required']">Password is required.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="signIn-form">
+              <div class="form-label" [ngClass]="{'text-danger': form.get('confirmPassword')?.invalid && (form.get('confirmPassword')?.dirty || form.get('confirmPassword')?.touched)}">
+                <h3>Confirm Password</h3>
+              </div>
+              <div class="form-field">
+                <input type="password" class="form-control custom-input" id="confirmPassword" formControlName="confirmPassword" [ngClass]="{'invalid-input': form.get('confirmPassword')?.invalid && (form.get('confirmPassword')?.dirty || form.get('confirmPassword')?.touched)}">
+                <div *ngIf="form.get('confirmPassword')?.invalid && (form.get('confirmPassword')?.dirty || form.get('confirmPassword')?.touched)" class="text-danger">
+                  <small *ngIf="form.get('confirmPassword')?.errors?.['required']">Confirm Password is required.</small>
+                  <small *ngIf="form.get('confirmPassword')?.errors?.['mismatch']">Passwords do not match.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="signup-button">
+            <div class="button">
+              <button class="mb-4" type="submit" [disabled]="!form.valid">Create an account</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
