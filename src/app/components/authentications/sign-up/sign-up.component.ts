@@ -1,7 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { UserService } from '../authService/auth.service';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,14 +12,15 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   imports: [RouterOutlet, RouterLink, ReactiveFormsModule, CommonModule],
 })
 export class SignUPComponent implements OnInit {
-
   form!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+     private authService: UserService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      name: ['', [Validators.required]],
+      username: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
       confirmPassword: ['', [Validators.required]]
@@ -34,8 +36,19 @@ export class SignUPComponent implements OnInit {
 
   submitForm(): void {
     if (this.form.valid) {
-      // Handle form submission
       console.log('Form submitted:', this.form.value);
+      const userData = this.form.value;
+      this.authService.registerUser(userData).subscribe(
+        res => {
+          console.log("User registered successfully!", res);
+          alert("User registered successfully!");
+          this.router.navigate(['/signIn']);
+
+        },
+        err => {
+          console.error("User registration failed", err);
+        }
+      );
     }
   }
 }

@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { UserService } from '../authService/auth.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -14,7 +15,9 @@ export class SignInComponent  implements OnInit {
 
   form!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+     private authService: UserService,
+    private router:Router ) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -25,9 +28,18 @@ export class SignInComponent  implements OnInit {
 
   submitForm(): void {
     if (this.form.valid) {
-      // Handle form submission
-      console.log('Form submitted:', this.form.value);
+      const userData = this.form.value;
+      this.authService._signInUser$(userData).subscribe({
+        next: (res) => {
+          alert("user login successfully !!!");
+          this.router.navigate(['/home'])
+        },
+        error: (err) => {
+          console.error("Error:", err);
+        }
+      });
     }
   }
+  
 
 }
