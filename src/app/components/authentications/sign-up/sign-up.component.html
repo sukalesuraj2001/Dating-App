@@ -26,13 +26,13 @@
         <div class="row">
           <div class="col-md-12">
             <div class="signIn-form">
-              <div class="form-label" [ngClass]="{'text-danger': form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)}">
+              <div class="form-label" [ngClass]="{'text-danger': form.get('username')?.invalid && (form.get('username')?.dirty || form.get('username')?.touched)}">
                 <h3>Your Name</h3>
               </div>
               <div class="form-field">
-                <input type="text" class="form-control custom-input" id="name" formControlName="name" [ngClass]="{'invalid-input': form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)}">
-                <div *ngIf="form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)" class="text-danger">
-                  <small *ngIf="form.get('name')?.errors?.['required']">Name is required.</small>
+                <input type="text" class="form-control custom-input" id="username" formControlName="username" [ngClass]="{'invalid-input': form.get('username')?.invalid && (form.get('username')?.dirty || form.get('username')?.touched)}">
+                <div *ngIf="form.get('username')?.invalid && (form.get('username')?.dirty || form.get('username')?.touched)" class="text-danger">
+                  <small *ngIf="form.get('username')?.errors?.['required']">Username is required.</small>
                 </div>
               </div>
             </div>
@@ -87,6 +87,7 @@
           </div>
         </div>
       </form>
+      
     </div>
   </div>
 </section>
